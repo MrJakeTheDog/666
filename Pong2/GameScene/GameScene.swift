@@ -5,6 +5,10 @@ import Foundation
 import CoreMotion
 import Starscream
 
+protocol Transition {
+   func transition()
+}
+
 class GameScene: SKScene {
     
     // MARK: - variables
@@ -12,47 +16,75 @@ class GameScene: SKScene {
     var enemy = SKSpriteNode()
     var player = SKSpriteNode()
     
-    var topLbl = SKLabelNode()
-    var btmLbl = SKLabelNode()
-    
-    var playerCategory = UInt32()
-    var enemyCategory = UInt32()
-    var ballCategory = UInt32()
-    var borderCategory = UInt32()
-    
-    var pScore = Int()
-    var eScore = Int()
-    var ricochets = Int()
-    var 
-    
-    var message: UserData!
-    var socket: WebSocket!
+    var topLabel = SKLabelNode()
+    var btmLabel = SKLabelNode()
+    var background: SKSpriteNode!
+    var search: SKLabelNode!
+    var progress: SKLabelNode!
+    var timer: Timer!
+    var topTimer: Timer!
+    var btmTimer: Timer!
+    var gameOver = Bool()
 
-    var skpBorder = SKPhysicsBody()
-    var skpPlayer = SKPhysicsBody()
-    var skpEnemy = SKPhysicsBody()
-    var skpBall = SKPhysicsBody()
+    var btmScore = Int()
+    var topScore = Int()
+    var limit = Int()
+    
+    var delegateVC: Transition?
+    
+    var ricochetScore = Int()
+    
+    var identifier: Int!
+    var type = DecodeType.identifiers
+    var isConnected = Bool()
+
+    var socket: WebSocket!
     
     var xAccelerate = CGFloat()
-    
-    var isConnected = Bool()
 
     // MARK: - didMove()
     override func didMove(to view: SKView) {
-        loadGameSettings()
-        connectionToServer()
-        startGame()
+        object()
+        server()
+        connected()
+        //TESTMESSAGE()
+        if gameType != .online {
+            сountdown()
+        }
+        //socket.disconnect()
+//        _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+//                  do {
+//                                 let jsonEncoder = JSONEncoder()
+//                    let jsonData = try jsonEncoder.encode(Disconnect(id: self.identifier))
+//                    self.socket.write(data: jsonData)
+//                             } catch {
+//                                 print("Unexpected error: \(error).")
+//                             }
+//            self.socket?.disconnect (closeCode: 0)
+//            
+//        }
     }
+    
 
     deinit {
+        print("666")
         if gameType == .online {
+            do {
+                let jsonEncoder = JSONEncoder()
+                let jsonData = try jsonEncoder.encode(Disconnect(id: identifier))
+                socket.write(data: jsonData)
+            } catch {
+                print("Unexpected error: \(error).")
+            }
             socket?.disconnect (closeCode: 0)
             socket?.delegate = nil
+            delegateVC = nil
         }
     }
 }
 
-
+extension GameScene: SKPhysicsContactDelegate {}
+extension GameScene: WebSocketDelegate {}
 
 
 

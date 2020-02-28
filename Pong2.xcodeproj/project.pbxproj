@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D7F8CF123FA7ABD000AFD48 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F8CF023FA7ABD000AFD48 /* Custom.swift */; };
-		2D7F8CF323FA7B88000AFD48 /* WebSocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F8CF223FA7B88000AFD48 /* WebSocketDelegate.swift */; };
-		2D7F8CF623FA7F14000AFD48 /* SKPhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F8CF523FA7F14000AFD48 /* SKPhysicsContactDelegate.swift */; };
-		2D7F8CF923FA8227000AFD48 /* NoCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F8CF823FA8227000AFD48 /* NoCustom.swift */; };
-		2DB21C3C23FA982000555DA6 /* Server message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB21C3B23FA982000555DA6 /* Server message.swift */; };
+		2DB21C3C23FA982000555DA6 /* TESTMESSAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */; };
 		2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */; };
+		2DBD853723FD4A4500EAC253 /* CustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */; };
+		2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */; };
 		AC0233271DAD29F800FAFCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0233261DAD29F800FAFCE9 /* AppDelegate.swift */; };
 		AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC0233281DAD29F800FAFCE9 /* GameScene.sks */; };
 		AC02332B1DAD29F800FAFCE9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC02332A1DAD29F800FAFCE9 /* Actions.sks */; };
@@ -66,12 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2D7F8CF023FA7ABD000AFD48 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
-		2D7F8CF223FA7B88000AFD48 /* WebSocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketDelegate.swift; sourceTree = "<group>"; };
-		2D7F8CF523FA7F14000AFD48 /* SKPhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsContactDelegate.swift; sourceTree = "<group>"; };
-		2D7F8CF823FA8227000AFD48 /* NoCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCustom.swift; sourceTree = "<group>"; };
-		2DB21C3B23FA982000555DA6 /* Server message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server message.swift"; sourceTree = "<group>"; };
+		2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTMESSAGE.swift; sourceTree = "<group>"; };
 		2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
+		2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFuncs.swift; sourceTree = "<group>"; };
+		2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCustomFuncs.swift; sourceTree = "<group>"; };
 		2DD34E0C23EDBE91001A0F8A /* libPinPondShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPinPondShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B4E7A06A4333A5DEA1B670 /* Pods-Pong2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pong2.debug.xcconfig"; path = "Target Support Files/Pods-Pong2/Pods-Pong2.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0233231DAD29F800FAFCE9 /* Pong2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pong2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,30 +135,12 @@
 			children = (
 				AC0233281DAD29F800FAFCE9 /* GameScene.sks */,
 				AC02332C1DAD29F800FAFCE9 /* GameScene.swift */,
-				2DB21C3B23FA982000555DA6 /* Server message.swift */,
+				2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */,
 				2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */,
-				2D7F8CF423FA7ED9000AFD48 /* Extensions */,
-				2D7F8CF723FA80CC000AFD48 /* Funcs */,
+				2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */,
+				2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */,
 			);
 			path = GameScene;
-			sourceTree = "<group>";
-		};
-		2D7F8CF423FA7ED9000AFD48 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2D7F8CF223FA7B88000AFD48 /* WebSocketDelegate.swift */,
-				2D7F8CF523FA7F14000AFD48 /* SKPhysicsContactDelegate.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2D7F8CF723FA80CC000AFD48 /* Funcs */ = {
-			isa = PBXGroup;
-			children = (
-				2D7F8CF023FA7ABD000AFD48 /* Custom.swift */,
-				2D7F8CF823FA8227000AFD48 /* NoCustom.swift */,
-			);
-			path = Funcs;
 			sourceTree = "<group>";
 		};
 		2DB8845623FA8CD800BB4BB1 /* MenuVC */ = {
@@ -440,15 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7F8CF623FA7F14000AFD48 /* SKPhysicsContactDelegate.swift in Sources */,
-				2D7F8CF923FA8227000AFD48 /* NoCustom.swift in Sources */,
+				2DBD853723FD4A4500EAC253 /* CustomFuncs.swift in Sources */,
 				AC02332D1DAD29F800FAFCE9 /* GameScene.swift in Sources */,
-				2D7F8CF123FA7ABD000AFD48 /* Custom.swift in Sources */,
-				2D7F8CF323FA7B88000AFD48 /* WebSocketDelegate.swift in Sources */,
 				2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */,
 				AC982FFD1E2451B1008DF40E /* MenuVC.swift in Sources */,
 				AC02332F1DAD29F800FAFCE9 /* GameViewController.swift in Sources */,
-				2DB21C3C23FA982000555DA6 /* Server message.swift in Sources */,
+				2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */,
+				2DB21C3C23FA982000555DA6 /* TESTMESSAGE.swift in Sources */,
 				AC0233271DAD29F800FAFCE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,10 +1,30 @@
 import SpriteKit
 
 // MARK: - User
-struct UserData: Codable {
-    var idN: Int? = Int()
-    var position: CGPoint = CGPoint()
-    var roomNumber: Int? = Int()
+struct User: Encodable {
+    var id: Int
+    var position: CGPoint
+}
+
+// MARK: - Identifiers
+struct Identifiers: Decodable {
+    var id: Int
+}
+
+// MARK: - Enemy
+struct Enemy: Decodable {
+    var position: CGPoint
+}
+
+// MARK: - Connection
+struct Connection: Decodable {
+    var isConnected: Bool
+}
+
+// MARK: - Disconnect
+struct Disconnect: Codable {
+    var id: Int
+    let disconnect = true
 }
 
 // MARK: - GameType
@@ -13,3 +33,11 @@ enum GameType {
     case player2
     case online
 }
+
+// MARK: - GameType
+enum DecodeType {
+    case enemy
+    case identifiers
+    case connection
+}
+

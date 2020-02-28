@@ -15,7 +15,7 @@ class MenuVC : UIViewController {
         moveToGameVC(game: .offline)
     }
     
-    //MARK: - Custom Funcs
+    //MARK: - Custom
     func moveToGameVC(game : GameType) {
         let gameVC = self.storyboard?.instantiateViewController(withIdentifier: "gameVC") as! GameViewController
         gameType = game
