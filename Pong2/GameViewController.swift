@@ -1,7 +1,7 @@
 import SpriteKit
 
 var gameType:GameType = .offline
-   var j = false
+ 
 class GameViewController: UIViewController, Transition {
     
     func transition() {
@@ -20,24 +20,20 @@ class GameViewController: UIViewController, Transition {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(j)
+        
         if let view = self.view as! SKView? {
-            if j == true {
-                print("1")
-            
-                } else {
-                    if let scene = SKScene(fileNamed: "GameScene") {
-                        j = true
-                    scene.scaleMode = .aspectFill
-                    scene.size = view.bounds.size
-                    let game = scene as? GameScene
-                    game?.delegateVC = self
-                    view.presentScene(scene)
-                        print("5")
-                }
+            if let scene = SKScene(fileNamed: "GameScene") {
+                
+                scene.scaleMode = .aspectFill
+                scene.size = view.bounds.size
+                let game = scene as? GameScene
+                game?.delegateVC = self
+                view.presentScene(scene)
+                
+                
             }
             
-
+            
             view.ignoresSiblingOrder = true
             view.showsFPS = true
             view.showsNodeCount = true

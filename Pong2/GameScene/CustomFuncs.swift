@@ -68,7 +68,7 @@ extension GameScene {
         player.position.y = (-self.frame.height / 2) + 50
         player.zPosition = 0
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
-        player.physicsBody?.isDynamic = false
+        player.physicsBody?.isDynamic = true
         player.physicsBody?.friction = 0
         player.physicsBody?.density = 1
         player.physicsBody?.affectedByGravity = false
@@ -84,11 +84,13 @@ extension GameScene {
         player.physicsBody?.usesPreciseCollisionDetection = true
         
         self.xAccelerate = 0
-        let motionManager = CMMotionManager()
+        //let motionManager = CMMotionManager()
         motionManager.accelerometerUpdateInterval = 0.02
+        motionManager.deviceMotionUpdateInterval = 0.02
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) {
             (data: CMAccelerometerData?, error: Error?) in
             if let accelerometrData = data {
+                print(data)
                 let acceleration = accelerometrData.acceleration
                 self.xAccelerate = CGFloat(acceleration.x) * 0.30 + self.xAccelerate * 0.25
             }
@@ -134,13 +136,14 @@ extension GameScene {
             enemy.run(SKAction.moveTo(x: ball.position.x, duration: 0.1))
             fallthrough
         default:
+
             player.position.x += xAccelerate * 50
-            if player.position.x < 0 {
-                player.position = CGPoint(x: UIScreen.main.bounds.width - player.size.width, y: player.position.y)
-            }
-            if gameType == .online, isConnected == true {
-                send(data: User(id: identifier, position: player.position))
-            }
+//            if player.position.x < 0 {
+//                player.position = CGPoint(x: UIScreen.main.bounds.width - player.size.width, y: player.position.y)
+//            }
+//            if gameType == .online, isConnected == true {
+//                send(data: User(id: identifier, position: player.position))
+//            }
         }
     }
     
@@ -444,7 +447,7 @@ extension GameScene {
     
     // MARK: - start
     func start() {
-        ball.physicsBody?.applyImpulse(CGVector(dx: 0 , dy: 10))
+        //ball.physicsBody?.applyImpulse(CGVector(dx: 0 , dy: 10))
     }
 }
 

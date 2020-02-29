@@ -5,6 +5,7 @@ import Foundation
 import CoreMotion
 import Starscream
 
+
 protocol Transition {
    func transition()
 }
@@ -30,6 +31,8 @@ class GameScene: SKScene {
     var topScore = Int()
     var limit = Int()
     
+    let motionManager = CMMotionManager()
+    
     var delegateVC: Transition?
     
     var ricochetScore = Int()
@@ -45,12 +48,15 @@ class GameScene: SKScene {
     // MARK: - didMove()
     override func didMove(to view: SKView) {
         object()
+        
         server()
         connected()
         //TESTMESSAGE()
         if gameType != .online {
             сountdown()
         }
+       
+        
         //socket.disconnect()
 //        _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
 //                  do {

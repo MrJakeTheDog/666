@@ -15,7 +15,7 @@ extension GameScene {
     
     // MARK: - didSimulatePhysics
     override func didSimulatePhysics() {
-        //managment(location: CGPoint(x: 0, y: 0))
+        managment(location: CGPoint(x: 0, y: 0))
     }
     
     // MARK: - touchesBegan
