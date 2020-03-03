@@ -6,5 +6,5 @@ target 'Pong2' do
   use_frameworks!
 
  pod 'Starscream' #'~> 4.0.0'
- 
+ pod 'SwiftLint'
 end
