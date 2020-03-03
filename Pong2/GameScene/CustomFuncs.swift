@@ -450,6 +450,3 @@ extension GameScene {
         //ball.physicsBody?.applyImpulse(CGVector(dx: 0 , dy: 10))
     }
 }
-
-
-

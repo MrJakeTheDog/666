@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2TM-21-6nP">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2TM-21-6nP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PixelStyle.ttf">
-            <string>LLPixel</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="4jQ-yo-IuW">
@@ -36,21 +31,15 @@
                         <viewControllerLayoutGuide type="bottom" id="iC5-bt-0hc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1NO-lf-QvV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-1l-rvt">
-                                <rect key="frame" x="160" y="356" width="55" height="30"/>
-                                <state key="normal" title="2 Player">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="player2:" destination="j5z-9e-ade" eventType="touchUpInside" id="3md-wb-VzF"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neonGridBackground" translatesAutoresizingMaskIntoConstraints="NO" id="b7N-FF-hiK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-LK-Tsx">
-                                <rect key="frame" x="153" y="318.5" width="69" height="30"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <rect key="frame" x="144.5" y="372" width="125" height="44"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="31"/>
                                 <state key="normal" title="Offline">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -59,8 +48,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI0-Tz-5oF">
-                                <rect key="frame" x="137.5" y="228" width="100" height="49"/>
-                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="30"/>
+                                <rect key="frame" x="81" y="241" width="252" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="4JL-7J-NY4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="41"/>
                                 <state key="normal" title="Online">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -72,26 +64,38 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ID-l5-Du4">
-                                <rect key="frame" x="99.5" y="285" width="176" height="21"/>
+                                <rect key="frame" x="119" y="304" width="176" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3d0-LP-QxD"/>
-                                    <constraint firstAttribute="width" constant="176" id="a9h-Dy-bAA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-1l-rvt">
+                                <rect key="frame" x="135" y="433" width="144" height="44"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="31"/>
+                                <state key="normal" title="2 Player">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="player2:" destination="j5z-9e-ade" eventType="touchUpInside" id="3md-wb-VzF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="41.5" id="HnW-n9-jD3"/>
-                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerY" secondItem="1NO-lf-QvV" secondAttribute="centerY" id="KW4-1H-XJW"/>
+                            <constraint firstItem="b7N-FF-hiK" firstAttribute="centerX" secondItem="LjC-LK-Tsx" secondAttribute="centerX" id="3G4-jW-JAq"/>
+                            <constraint firstItem="i4W-1l-rvt" firstAttribute="top" secondItem="LjC-LK-Tsx" secondAttribute="bottom" constant="17" id="EIF-DY-dh0"/>
+                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="leading" secondItem="1NO-lf-QvV" secondAttribute="leadingMargin" constant="61" id="F8z-l8-WUh"/>
+                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="centerX" secondItem="1ID-l5-Du4" secondAttribute="centerX" id="XtB-dT-9MP"/>
+                            <constraint firstItem="b7N-FF-hiK" firstAttribute="centerY" secondItem="1NO-lf-QvV" secondAttribute="centerY" id="ZRy-q5-Blf"/>
                             <constraint firstItem="i4W-1l-rvt" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="aOD-yZ-73F"/>
                             <constraint firstItem="1ID-l5-Du4" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="8" id="iqB-DQ-eNe"/>
+                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="76" id="jad-6w-w7M"/>
                             <constraint firstItem="1ID-l5-Du4" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="rD9-B9-dXY"/>
-                            <constraint firstItem="i4W-1l-rvt" firstAttribute="top" secondItem="LjC-LK-Tsx" secondAttribute="bottom" constant="7.5" id="t4p-FO-urn"/>
-                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="uTk-eM-Ncp"/>
                             <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="wRm-5s-2Ou"/>
+                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="top" secondItem="5zX-Pc-sBx" secondAttribute="bottom" constant="197" id="xH8-zE-lQc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nDl-Wn-v9A"/>
@@ -102,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghw-mJ-T5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-953" y="41"/>
+            <point key="canvasLocation" x="-955.07246376811599" y="40.848214285714285"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -113,7 +117,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -123,4 +127,7 @@
             <point key="canvasLocation" x="-118" y="41"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="neonGridBackground" width="414" height="896"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B7BF90240D2BE60035FA13 /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23B7BF8F240D2BE60035FA13 /* backgroundSound.mp3 */; };
 		2DB21C3C23FA982000555DA6 /* TESTMESSAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */; };
 		2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */; };
 		2DBD853723FD4A4500EAC253 /* CustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		23B7BF8F240D2BE60035FA13 /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTMESSAGE.swift; sourceTree = "<group>"; };
 		2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFuncs.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AC982FFC1E2451B1008DF40E /* MenuVC.swift */,
+				AC02332E1DAD29F800FAFCE9 /* GameViewController.swift */,
 				AC0233301DAD29F800FAFCE9 /* Main.storyboard */,
 			);
 			path = MenuVC;
@@ -196,9 +199,9 @@
 		AC0233251DAD29F800FAFCE9 /* Pong2 */ = {
 			isa = PBXGroup;
 			children = (
+				23B7BF8F240D2BE60035FA13 /* backgroundSound.mp3 */,
 				AC0233261DAD29F800FAFCE9 /* AppDelegate.swift */,
 				2DB8845623FA8CD800BB4BB1 /* MenuVC */,
-				AC02332E1DAD29F800FAFCE9 /* GameViewController.swift */,
 				2D7F8CEF23FA7A6C000AFD48 /* GameScene */,
 				2DB8845723FA8D6800BB4BB1 /* Support files */,
 			);
@@ -296,7 +299,6 @@
 					};
 					AC0233221DAD29F700FAFCE9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GHBU6QUY2H;
 						ProvisioningStyle = Automatic;
 					};
 					AC02333C1DAD29F800FAFCE9 = {
@@ -342,6 +344,7 @@
 				AC0233321DAD29F800FAFCE9 /* Main.storyboard in Resources */,
 				AC4197481DCA560100A2FDF1 /* PixelStyle.ttf in Resources */,
 				AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */,
+				23B7BF90240D2BE60035FA13 /* backgroundSound.mp3 in Resources */,
 				AC0233341DAD29F800FAFCE9 /* Assets.xcassets in Resources */,
 				AC0233371DAD29F800FAFCE9 /* LaunchScreen.storyboard in Resources */,
 				AC02332B1DAD29F800FAFCE9 /* Actions.sks in Resources */,
@@ -643,13 +646,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = GHBU6QUY2H;
+				DEVELOPMENT_TEAM = V6C2SVG5S3;
 				INFOPLIST_FILE = "$(SRCROOT)/Pong2/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Archetapadasdasdp.Pong2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NeonPong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -661,13 +664,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = GHBU6QUY2H;
+				DEVELOPMENT_TEAM = V6C2SVG5S3;
 				INFOPLIST_FILE = "$(SRCROOT)/Pong2/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Archetapadasdasdp.Pong2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NeonPong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
