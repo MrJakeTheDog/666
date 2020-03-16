@@ -4,17 +4,20 @@ var gameType: GameType = .offline
 
 class GameViewController: UIViewController, Transition {
 
+    var skView: SKView {
+        (self.view as? SKView)!
+    }
+
     func transition() {
         let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "menuVC") as? MenuVC
-        let view = self.view as? SKView
-        let scene = view?.scene as? GameScene
+        let scene = skView.scene as? GameScene
         scene?.delegateVC = nil
+        skView.presentScene(nil)
         self.navigationController?.pushViewController(menuVC ?? MenuVC(), animated: true)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let view = self.view as? SKView {
             guard let scene = SKScene(fileNamed: "GameScene") else {
                 return
             }
@@ -22,12 +25,14 @@ class GameViewController: UIViewController, Transition {
             scene.size = view.bounds.size
             let gameScene = scene as? GameScene
             gameScene?.delegateVC = self
-            view.presentScene(scene)
-            view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
+            skView.presentScene(scene)
+            skView.ignoresSiblingOrder = true
+            skView.showsFPS = true
+            skView.showsNodeCount = true
             //view.showsPhysics = true
-        }
+//        if skView != nil {
+//            skView.presentScene(skView.scene)
+//        }
     }
 
     override var shouldAutorotate: Bool {
@@ -48,5 +53,9 @@ class GameViewController: UIViewController, Transition {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+
+    deinit {
+        print("GameViewController")
     }
 }

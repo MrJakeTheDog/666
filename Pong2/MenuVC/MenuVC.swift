@@ -2,8 +2,10 @@ import UIKit
 
 class MenuVC: UIViewController {
 
+    // MARK: - @IBOutlets
     @IBOutlet weak var online: UIButton!
     @IBOutlet weak var status: UILabel!
+
     // MARK: - @IBActions
     @IBAction func online(_ sender: UIButton) {
         moveToGameVC(game: .online)
@@ -24,6 +26,7 @@ class MenuVC: UIViewController {
         self.navigationController?.pushViewController(gameVC ?? GameViewController(), animated: true)
     }
 
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         if  Internet.connection() == false {
             online.isEnabled = false

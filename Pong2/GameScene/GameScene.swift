@@ -92,6 +92,39 @@ class GameScene: SKScene {
             socket?.disconnect(closeCode: 0)
             socket?.delegate = nil
             delegateVC = nil
+
+            //49. 3
+
+            player.removeAllActions()
+            enemy.removeAllActions()
+            ball.removeAllActions()
+            player.removeFromParent()
+            enemy.removeFromParent()
+            ball.removeFromParent()
+
+            search.removeAllActions()
+            progress.removeAllActions()
+            background.removeAllActions()
+            backButton.removeAllActions()
+            search.removeFromParent()
+            progress.removeFromParent()
+            background.removeFromParent()
+            backButton.removeFromParent()
+
+            inverted.removeAllActions()
+            inverted.removeFromParent()
+
+            сountdown.removeAllActions()
+            сountdown.removeFromParent()
+            сountdownT.invalidate()
+
+            pauseLbl.removeAllActions()
+            pauseLbl.removeFromParent()
+
+            self.removeAllActions()
+            self.removeFromParent()
+            self.removeAllChildren()
+            self.removeChildren(in: self.children)
         }
     }
 }

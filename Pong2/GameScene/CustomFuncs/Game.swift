@@ -133,7 +133,8 @@ extension GameScene {
         if gameType != .player2 {
             motionManager.accelerometerUpdateInterval = 0.02
             motionManager.deviceMotionUpdateInterval = 0.02
-            motionManager.startAccelerometerUpdates(to: OperationQueue.current!) {(data: CMAccelerometerData?, _: Error?) in
+            motionManager.startAccelerometerUpdates(
+            to: OperationQueue.current!) {(data: CMAccelerometerData?, _: Error?) in
                 if let accelerometrData = data {
                     let acceleration = accelerometrData.acceleration
                     self.xAccelerate = CGFloat(acceleration.x) * 0.30 + self.xAccelerate * 0.25
