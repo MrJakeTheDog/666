@@ -10,8 +10,12 @@
 		23B7BF90240D2BE60035FA13 /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23B7BF8F240D2BE60035FA13 /* backgroundSound.mp3 */; };
 		2DB21C3C23FA982000555DA6 /* TESTMESSAGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */; };
 		2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */; };
-		2DBD853723FD4A4500EAC253 /* CustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */; };
+		2DBD853723FD4A4500EAC253 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* Game.swift */; };
 		2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */; };
+		2DC85D04240B0D5600DFC4B0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D03240B0D5600DFC4B0 /* Network.swift */; };
+		2DC85D07240B492A00DFC4B0 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D06240B492A00DFC4B0 /* Rules.swift */; };
+		2DC85D09240C80A200DFC4B0 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC85D08240C80A200DFC4B0 /* Explosion.sks */; };
+		2DC85D772410E74300DFC4B0 /* CustomMenuTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D762410E74300DFC4B0 /* CustomMenuTypes.swift */; };
 		AC0233271DAD29F800FAFCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0233261DAD29F800FAFCE9 /* AppDelegate.swift */; };
 		AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC0233281DAD29F800FAFCE9 /* GameScene.sks */; };
 		AC02332B1DAD29F800FAFCE9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC02332A1DAD29F800FAFCE9 /* Actions.sks */; };
@@ -68,8 +72,12 @@
 		23B7BF8F240D2BE60035FA13 /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTMESSAGE.swift; sourceTree = "<group>"; };
 		2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
-		2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFuncs.swift; sourceTree = "<group>"; };
+		2DBD853623FD4A4500EAC253 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCustomFuncs.swift; sourceTree = "<group>"; };
+		2DC85D03240B0D5600DFC4B0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2DC85D06240B492A00DFC4B0 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		2DC85D08240C80A200DFC4B0 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = "../../../game-master/AppSpaceBattle new version/AppSpaceBattle/SupportingFiles/Explosion.sks"; sourceTree = "<group>"; };
+		2DC85D762410E74300DFC4B0 /* CustomMenuTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuTypes.swift; sourceTree = "<group>"; };
 		2DD34E0C23EDBE91001A0F8A /* libPinPondShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPinPondShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B4E7A06A4333A5DEA1B670 /* Pods-Pong2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pong2.debug.xcconfig"; path = "Target Support Files/Pods-Pong2/Pods-Pong2.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0233231DAD29F800FAFCE9 /* Pong2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pong2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,9 +145,8 @@
 			children = (
 				AC0233281DAD29F800FAFCE9 /* GameScene.sks */,
 				AC02332C1DAD29F800FAFCE9 /* GameScene.swift */,
-				2DB21C3B23FA982000555DA6 /* TESTMESSAGE.swift */,
 				2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */,
-				2DBD853623FD4A4500EAC253 /* CustomFuncs.swift */,
+				2DC85D02240B0D3300DFC4B0 /* CustomFuncs */,
 				2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */,
 			);
 			path = GameScene;
@@ -149,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				AC982FFC1E2451B1008DF40E /* MenuVC.swift */,
-				AC02332E1DAD29F800FAFCE9 /* GameViewController.swift */,
+				2DC85D762410E74300DFC4B0 /* CustomMenuTypes.swift */,
 				AC0233301DAD29F800FAFCE9 /* Main.storyboard */,
 			);
 			path = MenuVC;
@@ -163,8 +170,19 @@
 				AC0233381DAD29F800FAFCE9 /* Info.plist */,
 				AC02332A1DAD29F800FAFCE9 /* Actions.sks */,
 				AC4197471DCA560100A2FDF1 /* PixelStyle.ttf */,
+				2DC85D08240C80A200DFC4B0 /* Explosion.sks */,
 			);
 			path = "Support files";
+			sourceTree = "<group>";
+		};
+		2DC85D02240B0D3300DFC4B0 /* CustomFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				2DBD853623FD4A4500EAC253 /* Game.swift */,
+				2DC85D06240B492A00DFC4B0 /* Rules.swift */,
+				2DC85D03240B0D5600DFC4B0 /* Network.swift */,
+			);
+			path = CustomFuncs;
 			sourceTree = "<group>";
 		};
 		9765AFC308FBD2D005B21164 /* Frameworks */ = {
@@ -232,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC0233511DAD29F800FAFCE9 /* Build configuration list for PBXNativeTarget "Pong2" */;
 			buildPhases = (
+				2DC85D01240AFD0F00DFC4B0 /* ShellScript */,
 				701E6CB414EBCA4C7E6F0410 /* [CP] Check Pods Manifest.lock */,
 				AC02331F1DAD29F700FAFCE9 /* Sources */,
 				AC0233201DAD29F700FAFCE9 /* Frameworks */,
@@ -347,6 +366,7 @@
 				23B7BF90240D2BE60035FA13 /* backgroundSound.mp3 in Resources */,
 				AC0233341DAD29F800FAFCE9 /* Assets.xcassets in Resources */,
 				AC0233371DAD29F800FAFCE9 /* LaunchScreen.storyboard in Resources */,
+				2DC85D09240C80A200DFC4B0 /* Explosion.sks in Resources */,
 				AC02332B1DAD29F800FAFCE9 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +388,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2DC85D01240AFD0F00DFC4B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		701E6CB414EBCA4C7E6F0410 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,13 +458,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DBD853723FD4A4500EAC253 /* CustomFuncs.swift in Sources */,
+				2DBD853723FD4A4500EAC253 /* Game.swift in Sources */,
 				AC02332D1DAD29F800FAFCE9 /* GameScene.swift in Sources */,
+				2DC85D07240B492A00DFC4B0 /* Rules.swift in Sources */,
 				2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */,
+				2DC85D04240B0D5600DFC4B0 /* Network.swift in Sources */,
 				AC982FFD1E2451B1008DF40E /* MenuVC.swift in Sources */,
+				2DC85D772410E74300DFC4B0 /* CustomMenuTypes.swift in Sources */,
 				AC02332F1DAD29F800FAFCE9 /* GameViewController.swift in Sources */,
 				2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */,
-				2DB21C3C23FA982000555DA6 /* TESTMESSAGE.swift in Sources */,
 				AC0233271DAD29F800FAFCE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

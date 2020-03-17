@@ -1,13 +1,15 @@
 import UIKit
 import AVFoundation
 
-class MenuVC : UIViewController {
+class MenuVC: UIViewController {
 
     let sound = AVPlayer(url: Bundle.main.url(forResource: "backgroundSound", withExtension: "mp3")!)
 
+    // MARK: - @IBOutlets
     @IBOutlet weak var online: UIButton!
     @IBOutlet weak var status: UILabel!
-    //MARK: - @IBActions
+
+    // MARK: - @IBActions
     @IBAction func online(_ sender: UIButton) {
         sound.pause()
         moveToGameVC(game: .online)
@@ -22,14 +24,15 @@ class MenuVC : UIViewController {
         sound.pause()
         moveToGameVC(game: .offline)
     }
-    
-    //MARK: - Custom
-    func moveToGameVC(game : GameType) {
-        let gameVC = self.storyboard?.instantiateViewController(withIdentifier: "gameVC") as! GameViewController
+
+    // MARK: - Custom
+    func moveToGameVC(game: GameType) {
+        let gameVC = self.storyboard?.instantiateViewController(withIdentifier: "gameVC") as? GameViewController
         gameType = game
-        self.navigationController?.pushViewController(gameVC, animated: true)
+        self.navigationController?.pushViewController(gameVC ?? GameViewController(), animated: true)
     }
-    
+
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         sound.play()
         if  Internet.connection() == false {
