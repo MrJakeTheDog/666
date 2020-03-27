@@ -7,4 +7,5 @@ target 'Pong2' do
 
  pod 'Starscream' #'~> 4.0.0'
  pod 'SwiftLint'
+ pod 'SwiftGifOrigin', '~> 1.7.0'
 end

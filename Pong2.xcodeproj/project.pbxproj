@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		239FF1B4242BE17500D5D460 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 239FF1B3242BE17400D5D460 /* Explosion.sks */; };
+		23DFD14A242D68EF00E590DD /* menuBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD149242D68EF00E590DD /* menuBackground.gif */; };
 		2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */; };
 		2DBD853723FD4A4500EAC253 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* Game.swift */; };
 		2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		239FF1B3242BE17400D5D460 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		23DFD149242D68EF00E590DD /* menuBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = menuBackground.gif; sourceTree = "<group>"; };
 		2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		2DBD853623FD4A4500EAC253 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCustomFuncs.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				AC0233331DAD29F800FAFCE9 /* Assets.xcassets */,
 				239FF1B3242BE17400D5D460 /* Explosion.sks */,
 				AC0233351DAD29F800FAFCE9 /* LaunchScreen.storyboard */,
+				23DFD149242D68EF00E590DD /* menuBackground.gif */,
 				AC0233381DAD29F800FAFCE9 /* Info.plist */,
 				AC02332A1DAD29F800FAFCE9 /* Actions.sks */,
 				AC4197471DCA560100A2FDF1 /* PixelStyle.ttf */,
@@ -246,8 +249,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC0233511DAD29F800FAFCE9 /* Build configuration list for PBXNativeTarget "Pong2" */;
 			buildPhases = (
-				2DC85D01240AFD0F00DFC4B0 /* ShellScript */,
 				701E6CB414EBCA4C7E6F0410 /* [CP] Check Pods Manifest.lock */,
+				2DC85D01240AFD0F00DFC4B0 /* ShellScript */,
 				AC02331F1DAD29F700FAFCE9 /* Sources */,
 				AC0233201DAD29F700FAFCE9 /* Frameworks */,
 				AC0233211DAD29F700FAFCE9 /* Resources */,
@@ -360,6 +363,7 @@
 				AC0233321DAD29F800FAFCE9 /* Main.storyboard in Resources */,
 				AC4197481DCA560100A2FDF1 /* PixelStyle.ttf in Resources */,
 				AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */,
+				23DFD14A242D68EF00E590DD /* menuBackground.gif in Resources */,
 				AC0233341DAD29F800FAFCE9 /* Assets.xcassets in Resources */,
 				AC0233371DAD29F800FAFCE9 /* LaunchScreen.storyboard in Resources */,
 				239FF1B4242BE17500D5D460 /* Explosion.sks in Resources */,

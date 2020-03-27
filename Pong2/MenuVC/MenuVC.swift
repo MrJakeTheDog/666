@@ -1,10 +1,12 @@
 import UIKit
+import SwiftGifOrigin
 
 class MenuVC: UIViewController {
 
     // MARK: - @IBOutlets
     @IBOutlet weak var online: UIButton!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
 
     // MARK: - @IBActions
     @IBAction func online(_ sender: UIButton) {
@@ -30,10 +32,13 @@ class MenuVC: UIViewController {
     override func viewDidLoad() {
         if  Internet.connection() == false {
             online.isEnabled = false
+            status.textColor = UIColor.red
             status.text = "No internet connection"
         } else {
             online.isEnabled = true
+            status.textColor = UIColor.green
             status.text = "Internet is connected"
         }
+        backgroundImageView.loadGif(name: "menuBackground")
     }
 }

@@ -39,10 +39,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBackground.gif" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-Ys-g2O">
+                                <rect key="frame" x="-53" y="-8" width="517" height="912"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-1l-rvt">
                                 <rect key="frame" x="179.5" y="470.5" width="55" height="30"/>
                                 <state key="normal" title="2 Player">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="player2:" destination="j5z-9e-ade" eventType="touchUpInside" id="3md-wb-VzF"/>
@@ -52,7 +55,7 @@
                                 <rect key="frame" x="172.5" y="433" width="69" height="30"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Offline">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="offline:" destination="j5z-9e-ade" eventType="touchUpInside" id="gUh-GS-KC5"/>
@@ -62,7 +65,7 @@
                                 <rect key="frame" x="157" y="342.5" width="100" height="49"/>
                                 <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="30"/>
                                 <state key="normal" title="Online">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="disabled">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,16 +81,20 @@
                                     <constraint firstAttribute="width" constant="176" id="a9h-Dy-bAA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cBw-Ys-g2O" firstAttribute="leading" secondItem="1NO-lf-QvV" secondAttribute="leadingMargin" constant="-73" id="82C-yK-sE2"/>
+                            <constraint firstItem="iC5-bt-0hc" firstAttribute="top" secondItem="cBw-Ys-g2O" secondAttribute="bottom" constant="-42" id="Fl2-5J-zlO"/>
                             <constraint firstItem="LjC-LK-Tsx" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="41.5" id="HnW-n9-jD3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBw-Ys-g2O" secondAttribute="trailing" constant="-70" id="IhH-ev-4o8"/>
                             <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerY" secondItem="1NO-lf-QvV" secondAttribute="centerY" id="KW4-1H-XJW"/>
                             <constraint firstItem="i4W-1l-rvt" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="aOD-yZ-73F"/>
                             <constraint firstItem="1ID-l5-Du4" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="8" id="iqB-DQ-eNe"/>
+                            <constraint firstItem="cBw-Ys-g2O" firstAttribute="top" secondItem="5zX-Pc-sBx" secondAttribute="bottom" constant="-52" id="pzo-s7-CaL"/>
                             <constraint firstItem="1ID-l5-Du4" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="rD9-B9-dXY"/>
                             <constraint firstItem="i4W-1l-rvt" firstAttribute="top" secondItem="LjC-LK-Tsx" secondAttribute="bottom" constant="7.5" id="t4p-FO-urn"/>
                             <constraint firstItem="mI0-Tz-5oF" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="uTk-eM-Ncp"/>
@@ -96,6 +103,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nDl-Wn-v9A"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="cBw-Ys-g2O" id="sp2-3R-8d4"/>
                         <outlet property="online" destination="mI0-Tz-5oF" id="yxh-TA-PQQ"/>
                         <outlet property="status" destination="1ID-l5-Du4" id="XWQ-84-zP6"/>
                     </connections>
@@ -123,4 +131,7 @@
             <point key="canvasLocation" x="-118" y="41"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuBackground.gif" width="270" height="480"/>
+    </resources>
 </document>
