@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2TM-21-6nP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2TM-21-6nP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PixelStyle.ttf">
-            <string>LLPixel</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="4jQ-yo-IuW">
@@ -43,27 +38,24 @@
                                 <rect key="frame" x="-53" y="-8" width="517" height="912"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-1l-rvt">
-                                <rect key="frame" x="179.5" y="470.5" width="55" height="30"/>
+                                <rect key="frame" x="156" y="539.5" width="102" height="47.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
                                 <state key="normal" title="2 Player">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="player2:" destination="j5z-9e-ade" eventType="touchUpInside" id="3md-wb-VzF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-LK-Tsx">
-                                <rect key="frame" x="172.5" y="433" width="69" height="30"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                <state key="normal" title="Offline">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="offline:" destination="j5z-9e-ade" eventType="touchUpInside" id="gUh-GS-KC5"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ID-l5-Du4">
+                                <rect key="frame" x="119" y="355" width="176" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI0-Tz-5oF">
-                                <rect key="frame" x="157" y="342.5" width="100" height="49"/>
-                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="30"/>
+                                <rect key="frame" x="153" y="290" width="108" height="59"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="40"/>
                                 <state key="normal" title="Online">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -74,31 +66,33 @@
                                     <action selector="online:" destination="j5z-9e-ade" eventType="touchUpInside" id="M2i-NZ-pHe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ID-l5-Du4">
-                                <rect key="frame" x="119" y="399.5" width="176" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3d0-LP-QxD"/>
-                                    <constraint firstAttribute="width" constant="176" id="a9h-Dy-bAA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-LK-Tsx">
+                                <rect key="frame" x="166.5" y="424.5" width="81" height="47"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                                <state key="normal" title="Offline">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="offline:" destination="j5z-9e-ade" eventType="touchUpInside" id="gUh-GS-KC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerY" secondItem="1NO-lf-QvV" secondAttribute="centerY" id="1eP-1O-hNp"/>
                             <constraint firstItem="cBw-Ys-g2O" firstAttribute="leading" secondItem="1NO-lf-QvV" secondAttribute="leadingMargin" constant="-73" id="82C-yK-sE2"/>
+                            <constraint firstItem="1ID-l5-Du4" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="A9q-J7-aC7"/>
+                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="DRO-OQ-jVf"/>
                             <constraint firstItem="iC5-bt-0hc" firstAttribute="top" secondItem="cBw-Ys-g2O" secondAttribute="bottom" constant="-42" id="Fl2-5J-zlO"/>
-                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="41.5" id="HnW-n9-jD3"/>
+                            <constraint firstItem="i4W-1l-rvt" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="IfE-eT-ZdF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cBw-Ys-g2O" secondAttribute="trailing" constant="-70" id="IhH-ev-4o8"/>
-                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerY" secondItem="1NO-lf-QvV" secondAttribute="centerY" id="KW4-1H-XJW"/>
-                            <constraint firstItem="i4W-1l-rvt" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="aOD-yZ-73F"/>
-                            <constraint firstItem="1ID-l5-Du4" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="8" id="iqB-DQ-eNe"/>
+                            <constraint firstItem="iC5-bt-0hc" firstAttribute="top" relation="lessThanOrEqual" secondItem="i4W-1l-rvt" secondAttribute="bottom" priority="750" constant="275" id="NDE-mk-uPr"/>
+                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="PYm-IH-Hqt"/>
+                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="top" relation="lessThanOrEqual" secondItem="5zX-Pc-sBx" secondAttribute="bottom" priority="750" constant="246" id="Wbw-ZE-2OC"/>
                             <constraint firstItem="cBw-Ys-g2O" firstAttribute="top" secondItem="5zX-Pc-sBx" secondAttribute="bottom" constant="-52" id="pzo-s7-CaL"/>
-                            <constraint firstItem="1ID-l5-Du4" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="rD9-B9-dXY"/>
-                            <constraint firstItem="i4W-1l-rvt" firstAttribute="top" secondItem="LjC-LK-Tsx" secondAttribute="bottom" constant="7.5" id="t4p-FO-urn"/>
-                            <constraint firstItem="mI0-Tz-5oF" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="uTk-eM-Ncp"/>
-                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="centerX" secondItem="1NO-lf-QvV" secondAttribute="centerX" id="wRm-5s-2Ou"/>
+                            <constraint firstItem="i4W-1l-rvt" firstAttribute="top" secondItem="LjC-LK-Tsx" secondAttribute="bottom" constant="68" id="q3t-M7-hOh"/>
+                            <constraint firstItem="1ID-l5-Du4" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="6" id="rzo-35-A3f"/>
+                            <constraint firstItem="LjC-LK-Tsx" firstAttribute="top" secondItem="mI0-Tz-5oF" secondAttribute="bottom" constant="75.5" id="vTq-Aw-QHk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nDl-Wn-v9A"/>
