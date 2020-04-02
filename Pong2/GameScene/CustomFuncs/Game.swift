@@ -188,6 +188,8 @@ extension GameScene {
         ballEmitter()
         playerBackButton()
         player2BackButton()
+        audio.isPositional = false
+        addChild(audio)
         matchLimit = 10
         gameOver = false
     }

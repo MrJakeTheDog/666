@@ -98,6 +98,8 @@ extension GameScene {
 
     // MARK: - victory
     func victory(winner: SKSpriteNode) {
+        audio.run(SKAction.stop())
+        self.run(SKAction.playSoundFileNamed("endRound.mp3", waitForCompletion: false))
         stopObj()
         let background = SKSpriteNode(color: .black, size: CGSize(width: self.frame.width, height: self.frame.height))
         background.alpha = 0
@@ -148,6 +150,8 @@ extension GameScene {
                 background.color = .black
             }
         }
+        afterEnd.isPositional = false
+        addChild(afterEnd)
     }
 
     // MARK: - refresh
@@ -181,6 +185,7 @@ extension GameScene {
             ricochetEmitter.emissionAngle = arctangent
             ricochetEmitter.resetSimulation()
         }
+        self.run(SKAction.playSoundFileNamed("outBall.mp3", waitForCompletion: false))
         topLabel.text = "\(topScore)"
         btmLabel.text = "\(btmScore)"
     }
