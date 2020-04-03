@@ -60,10 +60,12 @@ extension GameScene {
         if contact.bodyA.categoryBitMask == player.physicsBody?.categoryBitMask ||
             contact.bodyB.categoryBitMask == player.physicsBody?.categoryBitMask {
             ricochetScore += 1
+            self.run(SKAction.playSoundFileNamed("picSound.mp3", waitForCompletion: false))
         }
         if contact.bodyA.categoryBitMask == enemy.physicsBody?.categoryBitMask ||
             contact.bodyB.categoryBitMask == enemy.physicsBody?.categoryBitMask {
             ricochetScore += 1
+            self.run(SKAction.playSoundFileNamed("picSound.mp3", waitForCompletion: false))
         }
     }
 

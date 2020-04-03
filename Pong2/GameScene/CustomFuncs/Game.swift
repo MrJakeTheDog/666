@@ -156,10 +156,10 @@ extension GameScene {
     // MARK: - playerBackButton
     func playerBackButton() {
         if gameType != .online {
-            backButton = SKSpriteNode(texture: SKTexture(imageNamed: "X"))
+            backButton = SKSpriteNode(texture: SKTexture(imageNamed: "iconePause"))
             backButton.zPosition = 3
             backButton.position = CGPoint(x: 150, y: -300)
-            backButton.setScale(0.05)
+            backButton.setScale(1.30)
             self.addChild(backButton)
         }
     }
@@ -167,10 +167,10 @@ extension GameScene {
     // MARK: - player2BackButton
     func player2BackButton() {
         if gameType == .player2 {
-            player2Button = SKSpriteNode(texture: SKTexture(imageNamed: "X"))
+            player2Button = SKSpriteNode(texture: SKTexture(imageNamed: "iconePause"))
             player2Button.zPosition = 3
             player2Button.position = CGPoint(x: -150, y: 300)
-            player2Button.setScale(0.05)
+            player2Button.setScale(1.30)
             self.addChild(player2Button)
         }
     }
@@ -188,6 +188,8 @@ extension GameScene {
         ballEmitter()
         playerBackButton()
         player2BackButton()
+        audio.isPositional = false
+        addChild(audio)
         matchLimit = 10
         gameOver = false
     }

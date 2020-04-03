@@ -1,6 +1,7 @@
 import SpriteKit
 import CoreMotion.CMMotionManager
 import Starscream
+import AVFoundation
 
 // MARK: - protocols
 protocol Transition {
@@ -62,6 +63,12 @@ class GameScene: SKScene {
 
     var xAccelerate = CGFloat()
 
+//    let sound = AVPlayer(url: Bundle.main.url(forResource: "backgroundSoundMenu", withExtension: "mp3")!)
+
+    let audio = SKAudioNode(fileNamed: "gameBackgroundSound.mp3")
+
+    let afterEnd = SKAudioNode(fileNamed: "afterEndRound.mp3")
+
     var score = Int() {
         didSet {
             сountdown.text = "Start \(score)"
@@ -80,6 +87,7 @@ class GameScene: SKScene {
     }
 
     deinit {
+        afterEnd.run(SKAction.stop())
         print("Scene deinit")
         if gameType == .online {
             do {

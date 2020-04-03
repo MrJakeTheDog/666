@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239FF1B4242BE17500D5D460 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 239FF1B3242BE17400D5D460 /* Explosion.sks */; };
+		23DFD14A242D68EF00E590DD /* menuBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD149242D68EF00E590DD /* menuBackground.gif */; };
 		2DB8845523FA8BB700BB4BB1 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */; };
 		2DBD853723FD4A4500EAC253 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD853623FD4A4500EAC253 /* Game.swift */; };
 		2DBD858C240029C700EAC253 /* NoCustomFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */; };
 		2DC85D04240B0D5600DFC4B0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D03240B0D5600DFC4B0 /* Network.swift */; };
 		2DC85D07240B492A00DFC4B0 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D06240B492A00DFC4B0 /* Rules.swift */; };
-		2DC85D09240C80A200DFC4B0 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC85D08240C80A200DFC4B0 /* Explosion.sks */; };
 		2DC85D772410E74300DFC4B0 /* CustomMenuTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85D762410E74300DFC4B0 /* CustomMenuTypes.swift */; };
 		AC0233271DAD29F800FAFCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0233261DAD29F800FAFCE9 /* AppDelegate.swift */; };
 		AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC0233281DAD29F800FAFCE9 /* GameScene.sks */; };
@@ -67,12 +68,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		239FF1B3242BE17400D5D460 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		23DFD149242D68EF00E590DD /* menuBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = menuBackground.gif; sourceTree = "<group>"; };
 		2DB8845423FA8BB700BB4BB1 /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		2DBD853623FD4A4500EAC253 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2DBD858B240029C700EAC253 /* NoCustomFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCustomFuncs.swift; sourceTree = "<group>"; };
 		2DC85D03240B0D5600DFC4B0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2DC85D06240B492A00DFC4B0 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
-		2DC85D08240C80A200DFC4B0 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = "../../../game-master/AppSpaceBattle new version/AppSpaceBattle/SupportingFiles/Explosion.sks"; sourceTree = "<group>"; };
 		2DC85D762410E74300DFC4B0 /* CustomMenuTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuTypes.swift; sourceTree = "<group>"; };
 		2DD34E0C23EDBE91001A0F8A /* libPinPondShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPinPondShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B4E7A06A4333A5DEA1B670 /* Pods-Pong2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pong2.debug.xcconfig"; path = "Target Support Files/Pods-Pong2/Pods-Pong2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,11 +164,12 @@
 			isa = PBXGroup;
 			children = (
 				AC0233331DAD29F800FAFCE9 /* Assets.xcassets */,
+				239FF1B3242BE17400D5D460 /* Explosion.sks */,
 				AC0233351DAD29F800FAFCE9 /* LaunchScreen.storyboard */,
+				23DFD149242D68EF00E590DD /* menuBackground.gif */,
 				AC0233381DAD29F800FAFCE9 /* Info.plist */,
 				AC02332A1DAD29F800FAFCE9 /* Actions.sks */,
 				AC4197471DCA560100A2FDF1 /* PixelStyle.ttf */,
-				2DC85D08240C80A200DFC4B0 /* Explosion.sks */,
 			);
 			path = "Support files";
 			sourceTree = "<group>";
@@ -246,8 +249,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC0233511DAD29F800FAFCE9 /* Build configuration list for PBXNativeTarget "Pong2" */;
 			buildPhases = (
-				2DC85D01240AFD0F00DFC4B0 /* ShellScript */,
 				701E6CB414EBCA4C7E6F0410 /* [CP] Check Pods Manifest.lock */,
+				2DC85D01240AFD0F00DFC4B0 /* ShellScript */,
 				AC02331F1DAD29F700FAFCE9 /* Sources */,
 				AC0233201DAD29F700FAFCE9 /* Frameworks */,
 				AC0233211DAD29F700FAFCE9 /* Resources */,
@@ -360,9 +363,10 @@
 				AC0233321DAD29F800FAFCE9 /* Main.storyboard in Resources */,
 				AC4197481DCA560100A2FDF1 /* PixelStyle.ttf in Resources */,
 				AC0233291DAD29F800FAFCE9 /* GameScene.sks in Resources */,
+				23DFD14A242D68EF00E590DD /* menuBackground.gif in Resources */,
 				AC0233341DAD29F800FAFCE9 /* Assets.xcassets in Resources */,
 				AC0233371DAD29F800FAFCE9 /* LaunchScreen.storyboard in Resources */,
-				2DC85D09240C80A200DFC4B0 /* Explosion.sks in Resources */,
+				239FF1B4242BE17500D5D460 /* Explosion.sks in Resources */,
 				AC02332B1DAD29F800FAFCE9 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
